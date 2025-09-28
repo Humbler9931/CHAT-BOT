@@ -1,1 +1,25 @@
-
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: UPDATES_CHANNEL
+        value: "YOUR_UPDATES_CHANNEL"
+      - key: SUPPORT_GROUP
+        value: "YOUR_SUPPORT_GROUP"
+      - key: OWNER_USERNAME
+        value: "YOUR_OWNER_USERNAME"
+      - key: BOT_USERNAME
+        value: "YOUR_BOT_USERNAME"
+      - key: BOT_IMAGE
+        value: "YOUR_BOT_IMAGE_URL"
+      - key: MONGO_URL
+        value: "YOUR_MONGO_DB_URL"
+      - key: BOT_TOKEN
+        value: "YOUR_BOT_TOKEN"
+      - key: API_HASH
+        value: "YOUR_API_HASH"
+      - key: API_ID
+        value: "YOUR_API_ID"
